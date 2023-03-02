@@ -1,0 +1,57 @@
+<odoo>
+    <data>
+  
+  <!-- Tree View -->
+
+      <record id="registration_tree" model="ir.ui.view">
+          <field name="name">Registration</field>
+          <field name="model">se.course.registration</field>
+          <field name="arch" type="xml">
+              <tree string="Registration">
+                  <field name="section_id"/>
+                  <field name="course_id"/>
+                  <field name="teacher_id"/>
+                  <field name="student_ids"/>
+              </tree>
+          </field>
+      </record>
+  
+  <!-- Form View -->
+
+      <record id="registration_form_view" model="ir.ui.view">
+          <field name="name">registration.form.view</field>
+          <field name="model">se.course.registration</field>
+          <field name="arch" type="xml">
+              <form>
+                <h1 class="text-center">
+                  Daffodil International University 
+                </h1>
+                <h2 class="text-center">
+                  Course Registration 
+                </h2>
+                  <group>
+                      <field name="section_id"/>
+                      <field name="course_id"/>
+                      <field name="teacher_id"/>
+                      <field name="student_ids"/>
+                  </group>
+                </form>
+          </field>
+    </record>
+  
+  <!-- Action View -->
+
+      <record id="open_view_registration_tree" model="ir.actions.act_window">
+          <field name="name">Registration</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="res_model">se.course.registration</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    !!!Oops...No Record Found!!!!
+                </p>
+          </field>
+      </record>
+      
+    </data>
+  </odoo>

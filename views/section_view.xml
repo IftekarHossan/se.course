@@ -1,0 +1,54 @@
+<odoo>
+    <data>
+  
+  <!-- Tree View -->
+
+      <record id="section_tree" model="ir.ui.view">
+          <field name="name">Section</field>
+          <field name="model">se.section</field>
+          <field name="arch" type="xml">
+              <tree string="Section">
+                <field name="name"/>
+                <field name="code"/>
+              </tree>
+          </field>
+      </record>
+  
+  <!-- Form View -->
+
+      <record id="section_form_view" model="ir.ui.view">
+          <field name="name">section.form.view</field>
+          <field name="model">se.section</field>
+          <field name="arch" type="xml">
+              <form>
+                <h1 class="text-center">
+                  Daffodil International University 
+                </h1>
+                <h2 class="text-center">
+                  Sections 
+                </h2>
+                  <group>
+                      <field name="name"/>
+                      <field name="code"/>
+                      </group> 
+                </form>
+          </field>
+    </record>
+  
+  <!-- Action View -->
+
+
+      <record id="open_view_section_tree" model="ir.actions.act_window">
+          <field name="name">Section</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="res_model">se.section</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                  !!!No Record Found!!!!
+              </p>
+          </field>
+      </record>
+      
+    </data>
+  </odoo>

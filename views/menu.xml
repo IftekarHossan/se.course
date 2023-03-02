@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <menuitem 
+        name="Course Registration" 
+        id="se_course_registration_menu_root"
+    />
+
+    <menuitem 
+        name="Student"
+        id="se_menu_student"
+        parent="se_course_registration_menu_root"
+        action="act_open_se_student_view"
+    />
+    
+    <menuitem 
+        name="Teacher" 
+        id="se_teacher_list"
+        parent="se_course_registration_menu_root"
+        action="open_view_teacher_tree"
+    />
+
+    <menuitem 
+        name="Section" 
+        id="se_section_list"
+        parent="se_course_registration_menu_root"
+        action="open_view_section_tree"
+    />
+
+    <menuitem 
+        name="Registration" 
+        id="se_registration_list"
+        parent="se_course_registration_menu_root"
+        action="open_view_registration_tree"
+    />
+
+    <menuitem 
+        name="Course" 
+        id="se_course_list"
+        parent="se_course_registration_menu_root"
+        action="open_view_course_tree"
+    />
+
+    </data>
+</odoo>
